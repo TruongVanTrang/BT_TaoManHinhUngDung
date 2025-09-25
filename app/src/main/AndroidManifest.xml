@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BT_ManHinhUngDung">
         <activity android:name=".DanhSachPhimActivity" />
+        <activity android:name=".ChiTietPhimActivity" />
+
         <activity
             android:name=".TrangChuActivity"
             android:exported="true">

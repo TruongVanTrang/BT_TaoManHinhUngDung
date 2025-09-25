@@ -14,8 +14,6 @@ public class TrangChuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trang_chu);
 
         Button btnDanhSach = findViewById(R.id.btnDanhSachPhim);
-
-        // Khi bấm nút → chuyển sang Danh Sách Phim
         btnDanhSach.setOnClickListener(v -> {
             Intent intent = new Intent(TrangChuActivity.this, DanhSachPhimActivity.class);
             startActivity(intent);

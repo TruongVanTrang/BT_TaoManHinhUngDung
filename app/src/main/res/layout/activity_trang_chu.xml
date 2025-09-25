@@ -10,7 +10,7 @@
         android:id="@+id/tv_gioi_thieu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🎬 Ứng dụng đặt vé xem phim\nChào mừng bạn!"
+        android:text="🎬 TvT CINEMA\nChào mừng bạn!"
         android:textSize="20sp"
         android:gravity="center"
         android:layout_marginBottom="24dp"/>
