@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_gioi_thieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎬 Ứng dụng đặt vé xem phim\nChào mừng bạn!"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_xem_phim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xem phim"/>
+
+    <Button
+        android:id="@+id/btnDanhSachPhim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách phim"/>
+</LinearLayout>
