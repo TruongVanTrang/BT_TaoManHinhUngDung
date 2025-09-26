@@ -1,8 +1,10 @@
 package com.example.bt_manhinhungdung;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChiTietPhimActivity extends AppCompatActivity {
@@ -19,9 +21,8 @@ public class ChiTietPhimActivity extends AppCompatActivity {
         TextView txtNgayPhatHanh= findViewById(R.id.txtNgayPhatHanh);
         TextView txtDanhGia     = findViewById(R.id.txtDanhGia);
         TextView txtMoTa        = findViewById(R.id.txtMoTa);
-//        TextView txtSoLuong     = findViewById(R.id.txtSoLuongDaDat);
+        ImageView imgPoster     = findViewById(R.id.imgPoster);
 
-        // Nhận dữ liệu từ DanhSachPhimActivity
         Bundle b = getIntent().getExtras();
         if (b != null) {
             txtTenPhim.setText("Tên phim: " + b.getString("TEN_PHIM"));
@@ -31,16 +32,22 @@ public class ChiTietPhimActivity extends AppCompatActivity {
             txtNgayPhatHanh.setText("Ngày phát hành: " + b.getString("NGAY_PHAT_HANH"));
             txtDanhGia.setText("Đánh giá: " + b.getString("DANH_GIA"));
             txtMoTa.setText("Mô tả: " + b.getString("MO_TA"));
-//            txtSoLuong.setText("Số lượng đã đặt: " + b.getInt("SO_LUONG_DA_DAT"));
+
+            // 🖼 Hiển thị ảnh poster
+            int posterResId = b.getInt("POSTER_RES_ID", -1);
+            if (posterResId != -1) {
+                imgPoster.setImageResource(posterResId);
+            }
         }
 
-        // Nút điều hướng
         Button btnQuayLai = findViewById(R.id.btnQuayLai);
         Button btnHome    = findViewById(R.id.btnHome);
 
         btnQuayLai.setOnClickListener(v -> finish());
         btnHome.setOnClickListener(v -> {
-            finishAffinity(); // hoặc về TrangChuActivity
+            Intent homeIntent = new Intent(ChiTietPhimActivity.this, TrangChuActivity.class);
+            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
         });
     }
 }

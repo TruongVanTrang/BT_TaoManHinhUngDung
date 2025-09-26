@@ -102,12 +102,11 @@
             <ImageView
                 android:id="@+id/imgPoster"
                 android:layout_width="match_parent"
-                android:layout_height="476dp"
+                android:layout_height="440dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="16dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/avengersendgame"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 

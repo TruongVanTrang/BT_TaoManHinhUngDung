@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/bgr1">
 
     <TextView
         android:id="@+id/tv_gioi_thieu"
@@ -15,15 +16,27 @@
         android:gravity="center"
         android:layout_marginBottom="24dp"/>
 
-    <Button
-        android:id="@+id/btn_xem_phim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xem phim"/>
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="101dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Logo rạp chiếu"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/btnDanhSachPhim"
-        android:layout_width="wrap_content"
+        android:layout_width="207dp"
         android:layout_height="wrap_content"
-        android:text="Danh sách phim"/>
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:text="Xem Phim" />
+
+    <Button
+        android:id="@+id/btn_dat_ve"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Đặt vé" />
 </LinearLayout>

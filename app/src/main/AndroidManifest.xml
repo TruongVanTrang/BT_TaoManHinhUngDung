@@ -13,6 +13,8 @@
         android:theme="@style/Theme.BT_ManHinhUngDung">
         <activity android:name=".DanhSachPhimActivity" />
         <activity android:name=".ChiTietPhimActivity" />
+        <activity android:name=".ChonPhimActivity" />
+        <activity android:name=".XacNhanVeActivity" />
 
         <activity
             android:name=".TrangChuActivity"

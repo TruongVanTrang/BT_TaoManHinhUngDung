@@ -18,5 +18,10 @@ public class TrangChuActivity extends AppCompatActivity {
             Intent intent = new Intent(TrangChuActivity.this, DanhSachPhimActivity.class);
             startActivity(intent);
         });
+        Button btnDatVe = findViewById(R.id.btn_dat_ve);
+        btnDatVe.setOnClickListener(view -> {
+            Intent intent = new Intent(TrangChuActivity.this, ChonPhimActivity.class);
+            startActivity(intent);
+        });
     }
 }
