@@ -1,42 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp"
-    android:background="@drawable/bgr1">
+    android:background="@drawable/bgr1"
+    android:padding="16dp">
+
+    <!-- Header -->
+
+    <!-- Buttons chính -->
+
+    <!-- Danh sách phim nổi bật -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="80dp"
+            android:layout_height="74dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_gioi_thieu"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="🎬 TvT CINEMA"
+            android:textColor="#B32020"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="67dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDanhSachPhim"
+            android:layout_width="6dp"
+            android:layout_height="81dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="🎥 Xem Phim"
+            android:textColor="#FBFBFB"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_dat_ve"
+            android:layout_width="0dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="🎟 Đặt Vé"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_gioi_thieu"
+        android:id="@+id/tvPhimNoiBat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🎬 TvT CINEMA\nChào mừng bạn!"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"/>
-
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="101dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="Logo rạp chiếu"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo" />
-
-    <Button
-        android:id="@+id/btnDanhSachPhim"
-        android:layout_width="207dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:text="Phim nổi bật"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:text="Xem Phim" />
+        android:layout_below="@id/main_buttons"
+        android:layout_marginTop="50dp"/>
 
-    <Button
-        android:id="@+id/btn_dat_ve"
-        android:layout_width="155dp"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Đặt vé" />
-</LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/scrollPhim"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvPhimNoiBat"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/layoutPhim"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Ví dụ phim, sẽ add dynamic bằng code -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avengersendgame" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/docterstrange" />
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/minion" />
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/spiderman" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

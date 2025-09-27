@@ -120,5 +120,19 @@ public class ChonPhimActivity extends AppCompatActivity {
             i.putExtra("POSTER_RES", posterRes);
             startActivity(i);
         });
+        Intent intent = getIntent();
+        String phimChon = intent.getStringExtra("TEN_PHIM");
+        int poster = intent.getIntExtra("POSTER_RES", R.drawable.bgr_dv);
+
+// Cập nhật ImageView
+        imgPoster.setImageResource(poster);
+
+// Spinner hiển thị phim
+        if (phimChon != null) {
+            int index = ((ArrayAdapter) spinnerPhim.getAdapter()).getPosition(phimChon);
+            if (index >= 0) spinnerPhim.setSelection(index);
+        }
+
+
     }
 }

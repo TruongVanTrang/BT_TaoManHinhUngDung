@@ -46,7 +46,7 @@ public class XacNhanVeActivity extends AppCompatActivity {
         imgPosterConfirm.setImageResource(posterRes);
 
         btnThanhToan.setOnClickListener(v -> {
-            Toast.makeText(this, "Thanh toán thành công!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Xác nhận thành công!", Toast.LENGTH_SHORT).show();
             layoutThongTin.setVisibility(View.GONE);
             layoutThanhCong.setVisibility(View.VISIBLE);
         });

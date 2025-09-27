@@ -108,7 +108,17 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 tools:ignore="ContentDescription" />
-        </LinearLayout>
 
+            <Button
+                android:id="@+id/btnDatVeNgay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ĐẶT VÉ NGAY"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

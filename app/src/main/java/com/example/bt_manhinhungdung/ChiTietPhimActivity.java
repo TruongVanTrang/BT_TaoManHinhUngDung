@@ -1,5 +1,6 @@
 package com.example.bt_manhinhungdung;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ChiTietPhimActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,5 +51,22 @@ public class ChiTietPhimActivity extends AppCompatActivity {
             homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(homeIntent);
         });
+        Button btnDatVeNgay = findViewById(R.id.btnDatVeNgay);
+
+        btnDatVeNgay.setOnClickListener(v -> {
+            Intent i = new Intent(ChiTietPhimActivity.this, ChonPhimActivity.class);
+
+            // Lấy tên phim từ TextView (bỏ tiền tố "Tên phim: ")
+            String tenPhim = txtTenPhim.getText().toString().replace("Tên phim: ", "");
+            i.putExtra("TEN_PHIM", tenPhim);
+
+            // Lấy resource id ảnh poster (nếu bạn lưu posterRes khi set ảnh)
+            int posterRes = getIntent().getIntExtra("POSTER_RES_ID", R.drawable.bgr_dv);
+            i.putExtra("POSTER_RES", posterRes);
+
+            startActivity(i);
+        });
+
+
     }
 }
